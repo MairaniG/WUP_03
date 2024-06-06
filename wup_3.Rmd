@@ -54,13 +54,18 @@ The table shows that the back seats have the highest alcohol because its average
 
 ### Inferential results
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+The p-value is 0.00116, less than 0.05 so we reject the null hypothesis.
+In other words, there is a difference in alcohol consumption based on seats.
 
-  
-  
-### get fancy  
+## When significant follow up with TukeyHSD  
 
-
-
+```{r}
+plot(TukeyHSD(model1))
+```
 ## Conclusions
 
 
