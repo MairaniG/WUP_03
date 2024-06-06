@@ -25,7 +25,16 @@ $H_0$: There is no difference between the average number of drinks imbibed betwe
 
 $H_A$: The average number drinks is different between at least two rows.   
 
-## Now with ggplot - first select the basic data
+#Methods
+In the data set davidsdata Seat is a categorical variable and alcohol is numerical.
+
+We try to predict alcohol based on seats so we use the helper file numerical~cat.rmd.
+
+# results
+
+## descriptive results
+
+### graphical summary
 
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
@@ -35,17 +44,22 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```{r}
 basicCN + geom_boxplot()
 ```
+This boxplot shows that alcohol is most increased when a seat is at the back.
+
+### numerical summary
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+The table shows that the back seats have the highest alcohol because its average is the highest and it has the highest maximum as well.
+
+### Inferential results
+
+
   
   
 ### get fancy  
 
-```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
-```
 
-## Numerical Summarys 
-
-## Inferential Tests
 
 ## Conclusions
 
