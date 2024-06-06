@@ -66,6 +66,7 @@ In other words, there is a difference in alcohol consumption based on seats.
 ```{r}
 plot(TukeyHSD(model1))
 ```
+The Tukey test shows that the chance of alcohol consumption decreases as it approaches the front seat.
 ## Conclusions
-
+The inferential graph shows that the p-value is 0.00116, less than 0.05. This means that the null hypothesis is rejected as the value is too small and doesn't prove that there is no difference between the average number of drinks imbibed between people conditioned on the row they sit in. The tukey test and the numerical summary also prove that average number drinks is different between at least two rows. 
 
