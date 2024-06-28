@@ -44,13 +44,15 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```{r}
 basicCN + geom_boxplot()
 ```
-This boxplot shows that alcohol is most increased when a seat is at the back.
+
+This boxplot shows that alcohol is most increased when a seat is at the back.  
 
 ### numerical summary
 ```{r}
 favstats(alcohol~Seat,data=ucdavis1)
 ```
-The table shows that the back seats have the highest alcohol because its average is the highest and it has the highest maximum as well.
+
+The table shows that the back seats have the highest alcohol because its average is the highest and it has the highest maximum as well.   
 
 ### Inferential results
 
@@ -58,15 +60,20 @@ The table shows that the back seats have the highest alcohol because its average
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
+
 The p-value is 0.00116, less than 0.05 so we reject the null hypothesis.
-In other words, there is a difference in alcohol consumption based on seats.
+In other words, there is a difference in alcohol consumption based on seats.   
 
 ## When significant follow up with TukeyHSD  
 
 ```{r}
 plot(TukeyHSD(model1))
 ```
-The Tukey test shows that the chance of alcohol consumption decreases as it approaches the front seat.
-## Conclusions
-The inferential graph shows that the p-value is 0.00116, less than 0.05. This means that the null hypothesis is rejected as the value is too small and doesn't prove that there is no difference between the average number of drinks imbibed between people conditioned on the row they sit in. The tukey test and the numerical summary also prove that average number drinks is different between at least two rows. 
 
+The Tukey test shows that the chance of alcohol consumption decreases as it approaches the front seat.   
+
+## Conclusions
+
+The inferential graph shows that the p-value is 0.00116, less than 0.05. This means that the null hypothesis is rejected as the value is too small and doesn't prove that there is no difference between the average number of drinks imbibed between people conditioned on the row they sit in. The tukey test and the numerical summary also prove that average number drinks is different between at least two rows.
+
+ To conclude, the inferential analysis conducted having a p-value of 0.00116 ( less than the significance level of 0.05), tells us we reject the null hypothesis.
