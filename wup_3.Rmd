@@ -74,6 +74,6 @@ The Tukey test shows that the chance of alcohol consumption decreases as it appr
 
 ## Conclusions
 
-The inferential graph shows that the p-value is 0.00116, less than 0.05. This means that the null hypothesis is rejected as the value is too small and doesn't prove that there is no difference between the average number of drinks imbibed between people conditioned on the row they sit in. The tukey test and the numerical summary also prove that average number drinks is different between at least two rows.
+The inferential graph shows that the p-value is 0.00116, less than 0.05. This means that the null hypothesis is rejected as the value is too small. The tukey test also proves that there is a difference in alcohol consumption between the back and front seats, this difference is also present with the middle and back seats.The Middle-Front has no difference as the interval is zero in it. We know this because of the dashed vertical line at zero which suggests no difference.
 
  To conclude, the inferential analysis conducted having a p-value of 0.00116 ( less than the significance level of 0.05), tells us we reject the null hypothesis.
