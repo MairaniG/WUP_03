@@ -70,7 +70,7 @@ In other words, there is a difference in alcohol consumption based on seats.
 plot(TukeyHSD(model1))
 ```
 
-The Tukey test shows that the chance of alcohol consumption decreases as it approaches the front seat.   
+The Tukey test shows that the chance of alcohol consumption decreases as it approaches the front and middle seat.   
 
 ## Conclusions
 
